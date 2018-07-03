@@ -5,8 +5,10 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
 if (environment.production) {
-  enableProdMode();
+    enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    // tslint:disable-next-line:no-console
+    .catch((err: any) => console.log(err));
