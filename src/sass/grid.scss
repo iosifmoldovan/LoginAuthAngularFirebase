@@ -1,0 +1,49 @@
+@import "responsive.scss";
+
+$columnPadding: 20px;
+
+.container {
+    margin: 0px auto;
+    max-width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    [class*="col-"] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        height: inherit;
+        padding: 0 $columnPadding;
+        background-clip: content-box;
+
+        &.col-inner {
+            padding: 0;
+        }
+    }
+}
+
+@include generateMediaSelectors($extraLarge-selector, $extraLarge-containerWidth, $extraLarge-id);
+
+@media only screen and (max-width: $large-breakpoint) {
+    @include generateMediaSelectors($large-selector, $large-containerWidth, $large-id);
+}
+
+@media only screen and (max-width: $medium-breakpoint) {
+    @include generateMediaSelectors($medium-selector, $medium-containerWidth, $medium-id);
+}
+
+@media only screen and (max-width: $small-breakpoint) {
+    @include generateMediaSelectors($small-selector, $small-containerWidth, $small-id);
+}
+
+@media only screen and (max-width: $extraSmall-breakpoint) {
+    @include generateMediaSelectors($extraSmall-selector, $extraSmall-containerWidth, $extraSmall-id);
+}
