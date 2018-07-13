@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-16">
+            <h1>Video</h1>
+        </div>
+    </div>
+    <form [formGroup]="videoForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-8 col-12-md col-16-sm">
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="Data" formControlName="date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Predicator" formControlName="speaker">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Url poza" formControlName="thumbnailUrl">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Url video" formControlName="videoUrl">
+                </mat-form-field>
+                <mat-form-field class="example-chip-list">
+                    <mat-chip-list #chipList formControlName="tags">
+                        <mat-chip *ngFor="let tag of tags" [selectable]="true" [removable]="true" (removed)="removeTag(tag)">
+                            {{ tag.name }}
+                            <mat-icon matChipRemove>cancel</mat-icon>
+                        </mat-chip>
+                        <input placeholder="Specifica taguri separate de virgula" formControlName="tags" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                            [matChipInputAddOnBlur]="true" (matChipInputTokenEnd)="addTag($event)">
+                    </mat-chip-list>
+                </mat-form-field>
+                <button mat-raised-button color="primary" type="submit">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

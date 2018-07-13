@@ -1,6 +1,6 @@
 @import "responsive.scss";
 
-$columnPadding: 20px;
+$columnPadding: 10px;
 
 .container {
     margin: 0px auto;
@@ -18,8 +18,8 @@ $columnPadding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        flex-wrap: wrap;
         align-items: center;
+        flex-wrap: wrap;
         height: inherit;
         padding: 0 $columnPadding;
         background-clip: content-box;

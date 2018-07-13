@@ -11,7 +11,9 @@
             true,
             "element",
             [
-                "b"
+                "h",
+                "v",
+                "r"
             ],
             "kebab-case"
         ],
@@ -19,7 +21,9 @@
             true,
             "attribute",
             [
-                "b"
+                "h",
+                "v",
+                "r"
             ],
             "kebab-case"
         ],
