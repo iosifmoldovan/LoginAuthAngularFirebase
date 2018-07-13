@@ -1,4 +1,4 @@
-import { COMMA } from '@angular/cdk/keycodes';
+import { ENTER } from '@angular/cdk/keycodes';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatChipInputEvent } from '@angular/material/chips';
@@ -15,7 +15,7 @@ import { VideosService } from '../../services/videos.service';
 export class VideoDetailsPage implements OnInit {
     videoForm: FormGroup;
     tags: Array<Tag> = [];
-    separatorKeysCodes: Array<number> = [COMMA];
+    separatorKeysCodes: Array<number> = [ENTER];
 
     constructor(private formBuilder: FormBuilder, private videosService: VideosService) { }
 
