@@ -145,6 +145,10 @@ $extraSmall-breakpoint: $small-windowWidth;
             align-items: flex-end;
         }
 
+        &.justify-center#{selector} {
+            justify-content: center;
+        }
+
         &.justify-start#{$selector} {
             justify-content: flex-start;
         }

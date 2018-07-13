@@ -1,25 +1,23 @@
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
-import { Component, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 
-export interface Video { data: Date; predicator: string; program: string; serie: string; tags: string; img: string; }
+import { Video } from '../models/video.model';
 
-@Component({
-    selector: 'b-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
-})
-export class AppComponent implements OnInit {
+@Injectable()
+export class VideosService {
     videos: Observable<Array<Video>>;
     private videosCollection: AngularFirestoreCollection<Video>;
 
     constructor(private afs: AngularFirestore) {
         this.afs.firestore.settings({ timestampsInSnapshots: true });
-    }
 
-    ngOnInit(): void {
         this.videosCollection = this.afs.collection<Video>('videos');
         this.videos = this.videosCollection.valueChanges();
+    }
+
+    add(video: Video): void {
+        this.videosCollection.add(video);
     }
 }
