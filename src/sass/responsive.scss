@@ -1,40 +1,36 @@
 $extraLarge-windowWidth: 1312px;
-$extraLarge-containerWidth: 1280px;
 $columnPadding: 10px;
 $extraLarge-selector: "";
 $extraLarge-id: 1;
 
 $large-windowWidth: 992px;
-$large-containerWidth: 960px;
 $large-selector: "-lg";
 $large-id: 2;
 $large-breakpoint: $extraLarge-windowWidth;
 
 $medium-windowWidth: 768px;
-$medium-containerWidth: 720px;
 $medium-selector: "-md";
 $medium-id: 3;
 $medium-breakpoint: $large-windowWidth;
 
 $small-windowWidth: 576px;
-$small-containerWidth: 540px;
 $small-selector: "-sm";
 $small-id: 4;
 $small-breakpoint: $medium-windowWidth;
 
-$extraSmall-containerWidth: auto;
 $extraSmall-selector: "-xs";
 $extraSmall-id: 5;
 $extraSmall-breakpoint: $small-windowWidth;
 
-@mixin generateMediaSelectors($selector, $containerWidth, $id) {
+@mixin generateMediaSelectors($selector, $id) {
     body:after {
         display: none;
         content: unquote("'") + $id + unquote("'");
     }
 
     .container {
-        width: $containerWidth;
+        width: 95%;
+        max-width: 1280px;
     }
 
     .hide#{$selector} {

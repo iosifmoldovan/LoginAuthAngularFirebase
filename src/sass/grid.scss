@@ -30,20 +30,20 @@ $columnPadding: 10px;
     }
 }
 
-@include generateMediaSelectors($extraLarge-selector, $extraLarge-containerWidth, $extraLarge-id);
+@include generateMediaSelectors($extraLarge-selector, $extraLarge-id);
 
 @media only screen and (max-width: $large-breakpoint) {
-    @include generateMediaSelectors($large-selector, $large-containerWidth, $large-id);
+    @include generateMediaSelectors($large-selector, $large-id);
 }
 
 @media only screen and (max-width: $medium-breakpoint) {
-    @include generateMediaSelectors($medium-selector, $medium-containerWidth, $medium-id);
+    @include generateMediaSelectors($medium-selector, $medium-id);
 }
 
 @media only screen and (max-width: $small-breakpoint) {
-    @include generateMediaSelectors($small-selector, $small-containerWidth, $small-id);
+    @include generateMediaSelectors($small-selector, $small-id);
 }
 
 @media only screen and (max-width: $extraSmall-breakpoint) {
-    @include generateMediaSelectors($extraSmall-selector, $extraSmall-containerWidth, $extraSmall-id);
+    @include generateMediaSelectors($extraSmall-selector, $extraSmall-id);
 }
