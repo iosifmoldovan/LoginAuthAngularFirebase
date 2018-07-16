@@ -1,7 +1,3 @@
-mat-card-title {
-    text-transform: capitalize;
-}
-
 mat-card-content {
     span:not(:last-child):after {
         content: ",";

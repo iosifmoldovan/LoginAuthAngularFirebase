@@ -1,6 +1,7 @@
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { FacebookModule } from 'ngx-facebook';
 
 import { registerLocaleData } from '@angular/common';
 import localeRo from '@angular/common/locales/ro';
@@ -36,7 +37,8 @@ const firebase: any = {
         MaterialModule,
         AngularFireModule.initializeApp(firebase),
         AngularFireAuthModule,
-        AngularFirestoreModule
+        AngularFirestoreModule,
+        FacebookModule.forRoot()
     ],
     bootstrap: [
         RootPage

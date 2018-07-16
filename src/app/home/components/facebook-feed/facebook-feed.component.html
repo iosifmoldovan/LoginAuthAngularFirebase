@@ -1,1 +1,15 @@
-<h1>Facebook Feed</h1>
+<div class="container">
+    <ngx-masonry>
+        <ngxMasonryItem class="col-4 col-one-third-md col-8-sm col-16-xs" *ngFor="let post of posts">
+            <mat-card>
+                <img mat-card-image [src]="post.full_picture">
+                <mat-card-header>
+                    <mat-card-subtitle>{{ post.created_time | date:'EEEE dd MMMM yyyy' }}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content *ngIf="post.message">
+                    <span>{{ post.message }}</span>
+                </mat-card-content>
+            </mat-card>
+        </ngxMasonryItem>
+    </ngx-masonry>
+</div>

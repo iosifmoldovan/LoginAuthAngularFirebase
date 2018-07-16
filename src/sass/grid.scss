@@ -30,6 +30,17 @@ $columnPadding: 10px;
     }
 }
 
+ngx-masonry {
+    ngxMasonryItem {
+        padding: $columnPadding;
+        overflow: hidden;
+
+        &.col-inner {
+            padding: 0;
+        }
+    }
+}
+
 @include generateMediaSelectors($extraLarge-selector, $extraLarge-id);
 
 @media only screen and (max-width: $large-breakpoint) {

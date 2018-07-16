@@ -1,3 +1,5 @@
+import { NgxMasonryModule } from 'ngx-masonry';
+
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
@@ -12,7 +14,8 @@ import { LandingPage } from './pages/landing/landing.page';
     imports: [
         CommonModule,
         MaterialModule,
-        HomeRoutingModule
+        HomeRoutingModule,
+        NgxMasonryModule
     ],
     declarations: [
         LandingPage,

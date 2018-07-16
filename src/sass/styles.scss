@@ -24,6 +24,18 @@ form {
     }
 }
 
-mat-card {
-    margin-bottom: 10px;
+mat-card-header {
+    .mat-card-header-text {
+        margin: 0px;
+
+        mat-card-title, mat-card-subtitle {
+            text-transform: capitalize;
+        }
+    }
+}
+
+mat-card-content {
+    * {
+        word-break: break-word;
+    }
 }

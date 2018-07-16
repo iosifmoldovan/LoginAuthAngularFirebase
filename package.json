@@ -28,6 +28,9 @@
         "core-js": "^2.5.7",
         "firebase": "^5.2.0",
         "hammerjs": "^2.0.8",
+        "lodash": "^4.17.10",
+        "ngx-facebook": "^2.4.0",
+        "ngx-masonry": "^1.1.2",
         "rxjs": "^6.2.1",
         "zone.js": "^0.8.26"
     },

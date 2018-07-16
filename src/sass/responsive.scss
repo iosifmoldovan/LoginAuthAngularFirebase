@@ -49,7 +49,7 @@ $extraSmall-breakpoint: $small-windowWidth;
         opacity: 1;
     }
 
-    .row {
+    .row, ngx-masonry {
         .col-1#{$selector} {
             width: 6.25%;
         }
