@@ -4,4 +4,5 @@ export class FacebookPost {
     full_picture: string;
     message: string;
     type: string;
+    link: string;
 }
