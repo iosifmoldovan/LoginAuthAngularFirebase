@@ -23,3 +23,28 @@ form {
         width: 100%;
     }
 }
+
+mat-card.mat-card {
+    border-radius: 5px;
+
+    .mat-card-image:first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    mat-card-header {
+        .mat-card-header-text {
+            margin: 0px;
+
+            mat-card-title, mat-card-subtitle {
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    mat-card-content {
+        * {
+            word-break: break-word;
+        }
+    }
+}

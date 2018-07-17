@@ -5,7 +5,7 @@
                 <mat-card-header>
                     <mat-card-title>{{ video.date | date:'EEEE dd MMMM yyyy' }}</mat-card-title>
                 </mat-card-header>
-                <img mat-card-image [src]="video.thumbnailUrl" [alt]="video.date | date">
+                <img mat-card-image [src]="video.thumbnailUrl" [alt]="video.date | date:'EEEE dd MMMM yyyy'">
                 <mat-card-content>
                     <div class="row justify-start">
                         <span *ngFor="let tag of video.tags">{{ tag.name }}</span>

@@ -27,7 +27,7 @@
                             {{ tag.name }}
                             <mat-icon matChipRemove>cancel</mat-icon>
                         </mat-chip>
-                        <input placeholder="Specifica taguri separate de virgula" formControlName="tags" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        <input placeholder="Specifica taguri separate de un enter" formControlName="tags" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
                             [matChipInputAddOnBlur]="true" (matChipInputTokenEnd)="addTag($event)">
                     </mat-chip-list>
                 </mat-form-field>
