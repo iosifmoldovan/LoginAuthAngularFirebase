@@ -1,5 +1,19 @@
 <div class="container">
-    <h-facebook-feed></h-facebook-feed>
-    <h-video-feed></h-video-feed>
-    <h-bible-feed></h-bible-feed>
+    <ngx-masonry [useImagesLoaded]="true">
+        <ngxMasonryItem class="col-one-third col-8-md col-16-xs" *ngFor="let card of cards">
+            <mat-card>
+                <img mat-card-image [src]="card.image">
+                <mat-card-header>
+                    <mat-card-subtitle>{{ card.subtitle | date:'EEEE dd MMMM yyyy' }}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content *ngIf="card.title || card.subtitle">
+                    <span *ngIf="card.title">{{ card.title }}</span>
+                    <span *ngIf="card.subtitle">{{ card.subtitle }}</span>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button color="primary" (click)="openLink(card.link)">DETALII</button>
+                </mat-card-actions>
+            </mat-card>
+        </ngxMasonryItem>
+    </ngx-masonry>
 </div>

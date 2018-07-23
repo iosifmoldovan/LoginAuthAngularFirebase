@@ -3,10 +3,10 @@ import { Observable } from 'rxjs';
 
 import { Injectable } from '@angular/core';
 
-import { Video } from '../models/video.model';
+import { Video } from '../../models/video.model';
 
 @Injectable()
-export class VideosService {
+export class VideosFeedService {
     videos: Observable<Array<Video>>;
     private videosCollection: AngularFirestoreCollection<Video>;
 

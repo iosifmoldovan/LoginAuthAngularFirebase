@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatChipInputEvent } from '@angular/material/chips';
 
-import { Tag, Video } from '../../models/video.model';
-import { VideosService } from '../../services/videos.service';
+import { VideosFeedService } from '../../../business/services/videos-feed.service';
+import { Tag, Video } from '../../../models/video.model';
 
 @Component({
     selector: 'v-video-details-page',
@@ -17,7 +17,7 @@ export class VideoDetailsPage implements OnInit {
     tags: Array<Tag> = [];
     separatorKeysCodes: Array<number> = [ENTER];
 
-    constructor(private formBuilder: FormBuilder, private videosService: VideosService) { }
+    constructor(private formBuilder: FormBuilder, private videosFeedService: VideosFeedService) { }
 
     ngOnInit(): void {
         this.videoForm = this.formBuilder.group({
@@ -60,7 +60,7 @@ export class VideoDetailsPage implements OnInit {
                 videoUrl: 'http://player.vimeo.com/video/273941643'
             };
 
-            this.videosService.add(video);
+            this.videosFeedService.add(video);
         }
     }
 }

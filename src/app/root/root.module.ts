@@ -10,6 +10,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
+import { BusinessModule } from '../business/business.module';
 import { MaterialModule } from '../material/material.module';
 import { RootPage } from './pages/root.page';
 import { RootRoutingModule } from './root-routing.module';
@@ -38,7 +39,8 @@ const firebase: any = {
         AngularFireModule.initializeApp(firebase),
         AngularFireAuthModule,
         AngularFirestoreModule,
-        FacebookModule.forRoot()
+        FacebookModule.forRoot(),
+        BusinessModule.forRoot()
     ],
     bootstrap: [
         RootPage

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { VideosService } from '../../services/videos.service';
+import { VideosFeedService } from '../../../business/services/videos-feed.service';
 
 @Component({
     selector: 'v-archive-page',
@@ -9,5 +9,5 @@ import { VideosService } from '../../services/videos.service';
 })
 // tslint:disable-next-line:component-class-suffix
 export class ArchivePage {
-    constructor(public videosService: VideosService) { }
+    constructor(public videosFeedService: VideosFeedService) { }
 }

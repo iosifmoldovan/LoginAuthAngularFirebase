@@ -1,5 +1,5 @@
 export class Video {
-    date: number;
+    date: string;
     speaker: string;
     tags: Array<Tag>;
     thumbnailUrl: string;

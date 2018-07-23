@@ -1,27 +1,21 @@
 <div class="container">
-    <div class="row align-start">
-        <div class="col-4 col-one-third-md col-8-sm col-16-xs" *ngFor="let video of videosService.videos | async">
+    <ngx-masonry [useImagesLoaded]="true">
+        <ngxMasonryItem class="col-one-third col-8-md col-16-xs" *ngFor="let video of videosFeedService.videos | async">
             <mat-card>
+                <img mat-card-image [src]="video.thumbnailUrl">
                 <mat-card-header>
-                    <mat-card-title>{{ video.date | date:'EEEE dd MMMM yyyy' }}</mat-card-title>
+                    <mat-card-subtitle>{{ video.date | date:'EEEE dd MMMM yyyy' }}</mat-card-subtitle>
                 </mat-card-header>
-                <img mat-card-image [src]="video.thumbnailUrl" [alt]="video.date | date:'EEEE dd MMMM yyyy'">
                 <mat-card-content>
-                    <div class="row justify-start">
-                        <span *ngFor="let tag of video.tags">{{ tag.name }}</span>
-                    </div>
+                    <span *ngFor="let tag of video.tags">{{ tag.name }}</span>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-raised-button color="primary">VIEW</button>
+                    <button mat-button color="primary">DETALII</button>
                 </mat-card-actions>
             </mat-card>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-16">
-            <button mat-fab routerLink="/videos/add">
-                <mat-icon aria-label="Add">add</mat-icon>
-            </button>
-        </div>
-    </div>
+        </ngxMasonryItem>
+    </ngx-masonry>
 </div>
+<button mat-fab routerLink="/videos/add">
+    <mat-icon aria-label="Add">add</mat-icon>
+</button>

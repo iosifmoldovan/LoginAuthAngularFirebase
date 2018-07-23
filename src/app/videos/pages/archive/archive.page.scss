@@ -4,3 +4,9 @@ mat-card-content {
         padding-right: 5px;
     }
 }
+
+button.mat-fab {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+}
