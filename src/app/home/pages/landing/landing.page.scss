@@ -1,1 +1,69 @@
+$circleSize: 115px;
 
+#Jumbo {
+    height: 85vh;
+    background: url("/assets/images/9.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .container {
+        height: 100%;
+
+        #Title {
+            height: 100%;
+
+            h1 {
+                margin: 0;
+                font-size: 55px;
+                color: #f5f5f5;
+            }
+
+            h3 {
+                font-size: 25px;
+                color: #f5f5f5;
+            }
+        }
+
+        #CirclesContainer {
+            padding-bottom: $circleSize / 2;
+            transform: translateY(-100%);
+
+            .circle {
+                cursor: pointer;
+                transition: all ease 0.3s;
+                width: $circleSize;
+                height: $circleSize;
+                border: 2px solid #f5f5f5;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 ($circleSize / 4);
+
+                h2 {
+                    margin: 0;
+                    color: white;
+                    text-align: center;
+                }
+
+                &:hover {
+                    background-color: white;
+
+                    h1 {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#Subtitle {
+    height: 15vh;
+
+    h3 {
+        text-align: center;
+        margin: 0;
+        font-size: 2vh;
+    }
+}

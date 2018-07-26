@@ -5,7 +5,7 @@ import { FacebookFeedService } from '../../../business/services/facebook-feed.se
 import { VideosFeedService } from '../../../business/services/videos-feed.service';
 import { FacebookPost } from '../../../models/facebook-post.model';
 import { LandingPageCard } from '../../../models/landing-page-card.model';
-import { Tag, Video } from '../../../models/video.model';
+import { Video } from '../../../models/video.model';
 
 @Component({
     selector: 'h-landing-page',
